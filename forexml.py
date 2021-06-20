@@ -1,6 +1,6 @@
 import numpy
 from scipy import stats
-from modules import framework
+from modules import controler
 
 # To compile, us Auto Py to Exe:
 # Step 1 - install Auto Py to Exe, if not already done
@@ -17,8 +17,6 @@ switch = 2
 if switch == 1 :
     speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 
-    x = numpy.mean(speed)
-    print(x)
     x = numpy.median(speed)
     print(x)
     x = stats.mode(speed)
@@ -38,4 +36,4 @@ elif switch == 2 :
     print("Mean = ", numpy.mean(speed))
     print("Standard Deviation = ", numpy.std(speed))
 
-framework.showWindow("main")
+controler.app()
